@@ -1,0 +1,109 @@
+// bower:scss
+@import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
+// endbower
+
+// partials
+// @import "partials/_kill-respond";
+@import "partials/_vars";
+@import "partials/_z-index";
+@import "partials/_mixins";
+@import "partials/_helpers";
+@import "partials/_header";
+@import "partials/_main-nav";
+@import "partials/_scrollable-content";
+@import "partials/_buttons";
+@import "partials/_footer";
+@import "partials/_icon-fonts";
+@import "partials/_typography";
+
+// elements
+@import "partials/elements/_quick-links-a";
+@import "partials/elements/_employee-recognition";
+@import "partials/elements/_sidebar-a";
+@import "partials/elements/_quick-links-a";
+@import "partials/elements/_sort-by";
+@import "partials/elements/_listings";
+@import "partials/elements/_inner-side-nav-a";
+@import "partials/elements/_document-updates";
+@import "partials/elements/_inline-alerts";
+@import "partials/elements/_guidelines-list-a";
+@import "partials/elements/_quick-panel-a";
+@import "partials/elements/_breadcrumbs-a";
+@import "partials/elements/_related-content";
+@import "partials/elements/_search-results-filter";
+@import "partials/elements/_search-results";
+@import "partials/elements/_pagination-a";
+@import "partials/elements/_calendar-a";
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+body, html { height: 100%; }
+*, :before, :after { box-sizing: border-box; }
+// html, body {overflow-x: hidden;}
+
+
+/*************************************
+/  home main container setup
+/************************************/
+.ios body, .ios html {
+  min-width: 1200px;
+}
+body.home #main, body.front #main {
+  padding: 3em 0;
+  min-height: 800px;
+  > .wrap-a {
+    @include bumpLeft160();
+    // margin-left: 178px;
+    width: 1040px;
+  }
+}
+
+/*************************************
+/  Inner - A
+/************************************/
+body.inner-a #main, body.not-front #main {
+  > .wrap-a {
+    width: 1040px;
+    @include clearfix();
+  }
+  .inner-content {
+    width: 880px;
+    float: left;
+    min-height: 800px;
+    position: relative;
+    padding: 40px;
+    &.tighter {
+      padding: 25px;
+    }
+    &:before {
+      background: $brandLighterBlue;
+      width: $leftColGutter;
+      height: 100%;
+      content: ' ';
+      position: absolute;
+      top: 0;
+      left: -$leftColGutter;
+    }
+    &.small {
+      width: 765px;
+      &:before {
+        display: none;
+      }
+    }
+  }
+  .inner-side-nav-col {
+    @include tameLists();
+    width: $leftColGutter;
+    float: left;
+    height: 100%;
+    position: relative;
+    margin-top: 40px;
+    &.large {
+      width: 270px;
+    }
+  }
+}

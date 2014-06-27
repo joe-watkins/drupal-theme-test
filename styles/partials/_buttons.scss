@@ -1,0 +1,16 @@
+.primary-button {
+  background: $brandOrange;
+  padding: .8em 0;
+  text-align: center;
+  color: $brandDarkBlue;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: solid 2px #fff;
+  font-size: 1.125em;
+  display: block;
+  letter-spacing: 1px;
+  &:hover {
+    background: $brandOrangeHover;
+    text-decoration: none;
+  }
+}

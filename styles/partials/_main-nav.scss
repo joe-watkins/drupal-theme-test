@@ -1,0 +1,58 @@
+/*************************************
+/  Main Nav
+/************************************/
+.main-nav {
+  @include tameLists();
+  max-width: 1010px;
+  position: absolute;
+  bottom: 0;
+  ul {
+    display: flex;
+  }
+  li {
+    line-height: 1em;
+    font-size: 1em;
+    .ff & { font-size: .9em; }
+    @media(max-width:1024px){
+      font-size: .8em;
+    }
+    width: 14.28em;
+    border-right: 1em solid $brandDarkBlue;
+    flex: 1 auto;
+    a {
+      background: $brandLightBlue;
+      display: block;
+      height: 3em;
+      color: #fff;
+      padding: .5em 1em;
+      text-decoration: none;
+      font-weight: bold;
+      &:hover {
+        text-decoration: underline;
+        background: lighten($brandLightBlue, 2%);
+      }
+    }
+    &.single-word { line-height: 2em; }
+    &.last { border: 0; }
+    &.selected a, &.active a { background: $brandLighterBlue; }
+  }
+
+  // old ie fallback styles
+  .ie.lt-ie11 & {
+    @include clearfix();
+    li {
+      width: 12em;
+      font-size: .8em;
+      float: left;
+    }
+  }
+
+  // ie <= 7
+  .ie.lt-ie8 & {
+    li {
+      font-size: .8em;
+      width: 9.845em;
+    }
+  }
+
+} // main-nav

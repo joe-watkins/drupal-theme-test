@@ -1,0 +1,110 @@
+.sort-by-wrapper-a  {
+  @include clearfix();
+  margin: 0 2em 2em 0;
+  overflow: hidden;
+}
+
+.sort-by {
+  $ql-width: 100%;
+  $ql-title-bg-color: #fff;
+  margin: 0; padding: 0;
+  width: $ql-width;
+  position: relative;
+  li {
+    list-style: none;
+    ul { padding: 0; }
+  }
+  .title a {
+    display: block;
+    padding: .5em 1em;
+    background: $ql-title-bg-color;
+  }
+  .sub-menu {
+    position: absolute;
+    top: 24px;
+    left: -2px;
+    width: $ql-width;
+    z-index: 10;
+    background: $ql-title-bg-color;
+    padding: .5em 1em;
+    li a {
+      //padding-left: 2em;
+      font-size: 85%;
+      line-height: 1;
+    }
+  }
+
+  &.sort-by-a {
+    @include clearfix();
+    border: 2px solid $brandDarkBlue;
+    position: relative;
+    &.half { width: 50%; }
+    &.width-40 { width: 40%; }
+    &.width-45 { width: 45%; }
+    &.width-48 { width: 48%; }
+    &.inline { display: inline-block; }
+
+    > li:after {
+      font-family: "icomoon";
+      content: '\e606';
+      position: absolute;
+      right: 10px;
+      top: 8px;
+      font-size: 8px;
+    }
+    .title a {
+      padding: .2em .4em;
+      color: $brandDarkBlue;
+      font-weight: bold;
+      font-size: 13px;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    .sub-menu {
+      background: $brandDarkBlue;
+      width: 102%;
+      top: 24px;
+      li a {
+        background: $brandDarkBlue;
+        color: #fff;
+        font-weight: normal;
+        padding:0 0 1em 0;
+        line-height: 1.3;
+        &:hover {
+          color: #60b5fc;
+        }
+      }
+      li:first-of-type {
+        a { padding-top: .6em; }
+      }
+      li:last-of-type {
+        a { padding-bottom: .6em; }
+      }
+    }
+  }
+
+  &.select {
+    height: 30px;
+    background: #fff url("../images/icon-select-down-arrow.png") no-repeat 95% 50%;
+    border-radius: 0;
+    padding-left: 5px;
+    -moz-appearance: button;
+    -webkit-appearance: button;
+    &::-ms-expand {
+        display: none;
+    }
+    .lt-ie10 &, .ff30 &, .ff31 &  {
+      background-image: none;
+      height: auto;
+    }
+  }
+} // quick-links
+
+.js .visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px; width: 1px;
+  margin: -1px; padding: 0; border: 0;
+}

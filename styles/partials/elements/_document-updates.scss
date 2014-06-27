@@ -1,0 +1,56 @@
+.document-updates-a {
+  @include tameLists();
+  background: $brandGreyScreen;
+
+  .wrap {
+    position: relative;
+    padding: 1em 0 0 1em;
+    &:after {
+      @include fontSmoothing();
+      font-family: "icomoon";
+      content: "\e605";
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      color: #CAC8C8;
+      font-size: 40px;
+    }
+  } // wrap
+
+  .month {
+    margin-bottom: 2em;
+    h4 {
+      color: #a1a1a1;
+      font-size: 30px;
+    }
+    .items {
+      background: #fff;
+      padding: 1.2em;
+      .item {
+        margin-bottom: 30px;
+        a {
+          color: #003366;
+          &:hover {
+            .inline-alert { text-decoration: none; }
+          }
+        }
+        p {
+          font-family: $sansSerif;
+          color: #003366;
+          font-weight: 200;
+        }
+        .date-time {
+          color: #7e7e7e;
+          margin-bottom: 3px;
+        }
+        .blurb { }
+        .type {
+          font-weight: bold;
+          padding-right: 7px;
+          text-transform: uppercase;
+        }
+      } // item
+    } // items
+  } // month
+
+} // document-updates-a

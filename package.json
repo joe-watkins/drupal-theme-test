@@ -1,0 +1,25 @@
+{
+  "name": "sass-starter",
+  "version": "0.0.0",
+  "description": "simple sass starter",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Joe Watkins",
+  "license": "",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-autoprefixer": "^0.7.5",
+    "grunt-browser-sync": "^0.9.1",
+    "grunt-contrib-imagemin": "^0.7.1",
+    "grunt-contrib-sass": "^0.7.3",
+    "grunt-contrib-uglify": "^0.5.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-svgmin": "^0.4.0",
+    "load-grunt-tasks": "^0.6.0"
+  }
+}

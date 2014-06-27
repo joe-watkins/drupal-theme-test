@@ -1,0 +1,72 @@
+/*************************************
+/  Header
+/************************************/
+#header {
+  // top header links
+  .top-header-links {
+    .wrap-a { @include bumpLeft160(); }
+    background: $brandTan;
+    position: relative;
+    padding: .4em;
+    ul { margin: 0; padding: 0; }
+    ul li {
+      list-style: none;
+      display: inline-block;
+      position: relative;
+      padding-right: 1em;
+      margin-right: 1em;
+      vertical-align: middle;
+      a {
+        color: #fff;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      &:after {
+        content: " ";
+        width: 1px;
+        height: 1em;
+        background: #fff;
+        position: absolute;
+        top: .2em;
+        right: 0;
+      }
+      &:first-of-type {
+        padding: 0;
+        margin-right: .5em;
+      }
+      &:first-of-type, &:last-of-type {
+        &:after { display: none; }
+      }
+    }
+  }
+  // logo area with search and nav
+  .header-wrap {
+    position: relative;
+    height: 116px;
+    background: $brandDarkBlue url('../images/header-rx.png') 15px bottom no-repeat;
+    .ie & {
+      height: 118px;
+    }
+    .wrap-a { @include bumpLeft160(); }
+    .logo.search {
+      max-width: 880px;
+      h1 {
+        font-size: 1.875em;
+        font-weight: bold;
+        margin-top: .3em;
+        position: relative;
+        a { color: #0358a0; }
+      } // h1
+
+      @include roundedSearch(); // see /partials/mixins.scss
+
+    }
+  }
+}
+.eq-ie9 #header h1:before { top: 8px !important; }
+.eq-ie10 #header h1:before { top: 8px !important; }
+.eq-ie11 #header h1:before { top: 18px !important; }
+
+.ios #header h1:before { top: 0px !important; }

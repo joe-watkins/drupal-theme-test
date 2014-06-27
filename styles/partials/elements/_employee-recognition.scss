@@ -1,0 +1,53 @@
+.employee-recognition-a {
+  header {
+    padding: 0;
+    margin-bottom: 1em;
+    border-bottom: 1px solid #002D5B;
+    .date {
+      display: inline-block;
+      margin-right: 45px;
+      font-size: 14px;
+      color: #9a9a9a;
+      text-transform: uppercase;
+    }
+    h3 {
+      display: inline-block;
+      font-size: 17px;
+      font-weight: 200;
+      text-transform: uppercase;
+      color: #003366;
+    }
+  } // header
+  figure {
+    float: left;
+  }
+  h4, p {
+    margin-left: 150px;
+  }
+  h4 a {
+    font-weight: bold;
+    color: $brandDarkBlue;
+  }
+  p {
+    color: #6f6f6f;
+    line-height: 1.2;
+  }
+  a.more {
+    font-style: italic;
+    font-weight: bold;
+    color: $brandHeadingBlue;
+    position: relative;
+    padding-left: .7em;
+    &:hover {
+      &:after {
+        text-decoration: none;
+      }
+    }
+    &:after {
+      content: '»';
+      position: absolute;
+      top: -2px;
+      right: -10px;
+    }
+  }
+} // employee-recognition-a

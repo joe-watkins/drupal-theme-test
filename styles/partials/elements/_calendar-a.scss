@@ -1,0 +1,208 @@
+.calendar-a {
+  background: $brandDarkBlue;
+  margin: 50px 0 50px 160px;
+  padding: 1em;
+
+  // controls
+  .controls {
+    @include clear();
+    .month {
+      width: 50%;
+      float: left;
+      h3 {
+        margin: 0;
+        padding: 0 0 .3em 0;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 36px;
+        span { padding: 0 30px 0 45px; }
+        .prev, .next {
+          position: relative;
+          &:hover:before { color: $brandLighterBlue }
+          &:before {
+            @include fontSmoothing();
+            font-family: "icomoon";
+            content: " ";
+            color: #fff;
+            position: absolute;
+            top: 9px;
+            left: 0;
+            font-size: 23px;
+          }
+        }
+        .prev:before { content: "\e611"; }
+        .next:before { content: "\e612"; }
+      }
+    }// month
+
+    .view-picker {
+      width: 50%;
+      float: right;
+      text-align: right;
+      ul {
+        @include tameLists();
+        li {
+          // float: right;
+          display: inline-block;
+          text-align: left;
+          margin-right: 1.7em;
+        }
+        li a {
+          display: block;
+          width: 35px;
+          height: 35px;
+          span { display: block; text-indent: -9999em; }
+          position: relative;
+          &:hover:after { color: #B3B3B3; }
+          &:after {
+            @include fontSmoothing();
+            font-family: "icomoon";
+            content: " ";
+            color: #fff;
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 30px;
+          }
+        }
+        li.grid a:after { content: "\e615"; }
+        li.list a:after { content: "\e614"; }
+        li.selected a:after, li.active a:after { color: $brandLighterBlue; }
+      }
+    } // view-picker
+  } // controls
+
+  // List View
+  .day {
+
+    background: #EBEBEB;
+    padding: 0 0 4px 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+
+    .date {
+      text-align: center;
+      //width: 150px;
+      float: left;
+      h4 {
+        padding: 0;
+        margin: 0;
+        font-size: 50px;
+        font-weight: 200;
+        line-height: 1;
+        position: absolute;
+        top: 10px;
+        left: 40px;
+        font-weight: 300;
+        color: $brandDarkBlue;
+        sup {
+          font-size: 70%;
+          font-weight: 200;
+        }
+      }
+    }
+    .info {
+      width: 670px;
+      float: right;
+      background: #fff;
+      position: relative;
+      padding: 1em;
+      overflow: hidden;
+      i {
+        cursor: pointer;
+        width: 22px;
+        height: 22px;
+        font-size: 18px;
+        transform: rotate(90deg);
+        display: inline-block;
+        position: absolute;
+        right: 7px;
+        bottom: 5px;
+      }
+
+      .item {
+        display: none;
+        border: 0;
+        margin: 0;
+        padding: 0;
+        &:first-of-type {
+          display: block;
+          .description { display: none; }
+        }
+      }
+
+      .item {
+
+        .date-line {
+          margin: 0;
+          color: #9a9a9a;
+          font-size: 12px;
+          font-family: $sansSerif;
+        }
+        .title {
+          color: #032D5A;
+          margin: 0 0 .3em 0;
+          font-weight: 200;
+          font-size: 24px;
+          width: 90%;
+          .type { font-weight: bold; }
+        }
+        .description p {
+          font-family: "Times New Roman";
+          color: #6f6f6f;
+          font-size: 15px;
+          a { font-weight: bold; font-style: italic; }
+        }
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        border-width: 0 15px 15px 0px;
+        border-color: #EBEBEB #fff;
+        border-style: solid;
+       }
+    }
+    &.selected {
+      background: #4FA3EF;
+      .date h4 { color: #fff; }
+      .info {
+        .item {
+          display: block;
+          border-bottom: 1px solid #ddd;
+          margin-bottom: 15px;
+          padding-bottom: 15px;
+          &:first-of-type {
+            display: block;
+            .description { display: block; }
+          }
+          &:last-of-type {
+            margin: 0;
+            padding: 0;
+            border: 0;
+          }
+        }
+        i {
+          transform: rotate(-90deg);
+          top: inherit;
+          right: 3px;
+          bottom: 5px;
+          color: $brandLighterBlue;
+        }
+        &:after {
+          border-color: #4FA3EF #fff;
+        }
+      }
+    }
+
+  } // list-view day
+
+  .grid-view {
+    h2 { color: #fff; }
+  }
+
+} // calendar-a

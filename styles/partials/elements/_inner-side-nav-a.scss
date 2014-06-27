@@ -1,0 +1,23 @@
+/*************************************
+/  Inner - Side Nav
+/************************************/
+.inner-side-nav-a {
+  width: 100%;
+  li {
+    margin: 0 0 5px 0;
+    a {
+      background: $brandDarkBlue;
+      display: block;
+      color: #fff;
+      padding: .9em;
+      &:hover {
+        text-decoration: none;
+        background: lighten($brandDarkBlue, 10%);
+      }
+    }
+    &.selected a {
+      background: #fff;
+      color: $brandDarkBlue;
+    }
+  }
+}

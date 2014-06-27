@@ -1,0 +1,94 @@
+/*************************************
+/  Listings
+/************************************/
+.listings {
+
+  @include tameLists();
+
+  .date-time {
+    font-size: 14px;
+    color: #9a9a9a;
+    margin-bottom: 5px;
+  }
+
+  /*  News-a - Homepage news listings
+  /************************************/
+  &.news-a {
+    .item {
+
+      position: relative;
+      border-bottom: 15px solid #EBEBEB;
+      margin-bottom: 30px;
+
+      .date-time, .title {
+        font-family: $sansSerif;
+        text-transform: uppercase;
+      }
+      .title {
+        font-size: 16px;
+        margin-top: 0;
+        font-weight: bold;
+        a {
+          color: $brandDarkBlue;
+          display: block;
+          width: 90%;
+        }
+      }
+      .blurb { font-size: 16px; }
+
+      i {
+        cursor: pointer;
+        width: 22px;
+        height: 22px;
+        font-size: 18px;
+      }
+      i.closed {
+        transform: rotate(90deg);
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        top: 24px;
+      }
+      i.on {
+        transform: rotate(-90deg);
+        top: inherit;
+        bottom: 5px;
+        right: -5px;
+      }
+
+    } // item
+
+  } // news-a
+
+  /*  With Document Iconography
+  /************************************/
+  &.with-document-icons {
+    .blurb {
+      p { margin-left: 40px; }
+      .type {
+        font-weight: bold;
+        display: inline-block;
+        padding-right: 10px;
+        text-transform: uppercase;
+        position: relative;
+        &:after {
+          @include fontSmoothing();
+          font-family: "icomoon";
+          position: absolute;
+          left: -38px;
+          top: -3px;
+          content: ' ';
+          font-size: 34px;
+          font-weight: normal;
+        }
+        &.doc:after { content: '\e60c'; }
+        &.misc:after { content: '\e60d'; }
+        &.ppt:after { content: '\e609'; }
+        &.exl:after { content: '\e60b'; }
+        &.pdf:after { content: '\e60a'; }
+        &.ext:after { content: '\e610'; }
+      }
+    }
+  } // with document icons
+
+}// listings

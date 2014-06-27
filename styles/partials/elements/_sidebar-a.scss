@@ -1,0 +1,67 @@
+#sidebar-a {
+  @include tameLists();
+  background: $brandDarkBlue;
+  position: absolute;
+  width: 100px;
+  .ie & {
+    width: 110px;
+  }
+  .ios & {
+    right: -220px;
+  }
+  top: 215px;
+  right: 0;
+  height: auto;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding: 1em;
+  z-index: 9999;
+  li {
+    text-align: center;
+    margin-bottom: 1em;
+    position: relative;
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+    &:before {
+      font-family: "icomoon";
+      position: absolute;
+      font-size: 40px;
+      top: 0;
+      left: 20%;
+      overflow: hidden;
+    }
+    &:hover:before {
+      opacity: .9;
+    }
+  }
+  li a {
+    display: block;
+    padding-top: 50px;
+    position: relative;
+    color: #fff;
+  }
+  li.time-sheets:before { content: "\e601"; }
+  li.reference:before { content: "\e600"; left: 23%; }
+  li.active-staff:before { content: "\e613"; }
+  li.med-ctr-directory:before { content: "\e603"; }
+  li.calendar:before { content: "\e604"; }
+  li.cafeteria:before { content: "\e602"; }
+  .ie & {
+    li:before { left: 25%; }
+  }
+  li.selected,li.active,li.selected a,li.active a {
+    color: $brandLighterBlue;
+  }
+  li.selected a, li.active a {
+    color: $brandLighterBlue;
+    &:after {
+      content: "";
+      position: absolute;
+      top: 15px;
+      left: -30px;
+      border-top: 20px solid transparent;
+      border-bottom: 20px solid transparent;
+      border-right: 20px solid $brandDarkBlue;
+    }
+  } // selected
+}

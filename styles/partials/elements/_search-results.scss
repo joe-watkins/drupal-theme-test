@@ -1,0 +1,69 @@
+.inner-search-bar {
+  @include roundedSearch(); // see /partials/mixins.scss
+  margin-bottom: 3em;
+  input {
+    position: relative !important;
+    border: 2px solid $brandDarkBlue !important;
+  }
+  button {
+    top: 13px !important;
+  }
+}
+
+.search-results {
+
+  &.urgent {
+    border: solid 23px #EBEBEB;
+    background: #F8F7F7;
+    padding: 30px 20px;
+  }// urgent results
+
+  &.all-results {
+    ul { margin: 30px 0 0 45px; }
+    h2 {
+      border-bottom: 1px solid $brandDarkBlue;
+      font-weight: 200;
+      padding-bottom: 5px;
+    }
+  }
+
+  ul li {
+    margin-bottom: 3em;
+    .title, .description {
+      margin-left: 50px;
+    }
+    .title {
+      margin-bottom: 0;
+      font-family: $sansSerif;
+      font-weight: 200;
+      font-size: 20px;
+      .type {
+        color: $brandAlertPink;
+        &:before {
+          position: absolute;
+          content: ' ';
+          top: 40px;
+          left: -42px;
+          font-size: 12px;
+          color: $brandDarkBlue;
+        }
+        &:after {
+          left: -45px !important;
+          color: $brandDarkBlue;
+        }
+        &.pdf:before { content: 'pdf'; }
+        &.doc:before { content: 'doc'; }
+        &.exl:before { content: 'exl'; }
+        &.ppt:before { content: 'ppt'; }
+        &.pdf:before { content: 'pdf'; }
+        &.ext:before { content: 'link'; left: -45px; }
+      }
+    }
+    .description {
+
+    }
+  } // ul li
+
+  a { color: $brandDarkBlue; }
+
+}

@@ -1,0 +1,53 @@
+.scrollable-content {
+
+  @include tameLists();
+
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: 0 1em 0 0;
+  position: relative;
+  &[data-height="200"]{
+    height: 200px;
+  }
+  &[data-height="300"]{
+    height: 300px;
+  }
+  &[data-height="400"]{
+    height: 400px;
+  }
+  &[data-height="485"]{
+    height: 485px;
+  }
+  &[data-height="550"]{
+    height: 550px;
+  }
+  &[data-height="650"]{
+    height: 650px;
+  }
+  &[data-height="750"]{
+    height: 750px;
+  }
+}
+
+.custom-scrollbar {
+  scrollbar-face-color:#9A9A9A;
+  scrollbar-arrow-color:#FFFFFF;
+  scrollbar-track-color:#DADADA;
+  scrollbar-shadow-color:#DADADA;
+  scrollbar-highlight-color:rgb(0,0,0);
+  scrollbar-3dlight-color:#808080;
+  scrollbar-darkshadow-Color:#202020;
+  &::-webkit-scrollbar {
+    width: 7px;
+  }
+  &::-webkit-scrollbar-track {
+    background: #DADADA;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: #9A9A9A;
+  }
+  &::-webkit-scrollbar-thumb:vertical:hover {
+    background: darken(#DADADA,40%);
+  }
+}

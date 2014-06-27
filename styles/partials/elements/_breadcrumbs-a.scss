@@ -1,0 +1,11 @@
+.breadcrumbs-a {
+  font: italic 14px/1 $serif;
+  color: #908f8f;
+  margin-bottom: 25px;
+  a {
+    color: #908f8f;
+    padding-right: .4em;
+    margin-left: .3em;
+    &:first-of-type { margin: 0; }
+  }
+}

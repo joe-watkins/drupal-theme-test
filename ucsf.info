@@ -1,0 +1,20 @@
+name = UCSF
+description = Starter theme for UCSF
+screenshot = screenshot.png
+core = "7.x"
+project = "UCSF"
+engine = phptemplate
+
+stylesheets[all][] = styles/main.css
+scripts[] = scripts/vendor/head.js
+scripts[] = scripts/vendor.js
+scripts[] = scripts/plugins.js
+scripts[] = scripts/main.js
+
+settings[clear_registry] = 0
+
+; Information added by drupal.org packaging script on 2013-04-18
+version = "7.28"
+core = "7.x"
+project = "ucsf"
+datestamp = "1366318585"

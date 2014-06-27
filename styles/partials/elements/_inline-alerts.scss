@@ -1,0 +1,33 @@
+/*************************************
+/  Inline Alerts
+/************************************/
+.inline-alert {
+
+  margin: 0 10px 0 23px;
+  font-family: $sansSerif;
+  font-size: 15px;
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  text-transform: uppercase;
+  padding: .04em .5em;
+  border-radius: 20px;
+  font-size: 13px;
+
+  &:before {
+    font-family: "icomoon";
+    content: '\e608';
+    position: absolute;
+    top: -1px;
+    left: -20px;
+    font-size: 16px;
+  }
+
+  &.important {
+    background: $brandAlertPink;
+    &:before {
+      color: $brandAlertPink;
+    }
+  } // important
+
+} // inline-alert
