@@ -12,12 +12,6 @@ $(document).ready(function(){
         $('#headerSearch label, #innerSearch label').compactize();
       },
 
-      quickLinks : function(){
-        $(".sort-by li.title").hover(function(){
-          $(this).find("ul").toggleClass("visually-hidden");
-        });
-      }, // quickLinks
-
       newsListings : function(){
 
         if($(".news-a").size() === 0){ return; }
@@ -141,7 +135,6 @@ $(document).ready(function(){
   }// Engine
 
   Engine.ui.labels();
-  Engine.ui.quickLinks();
   Engine.ui.newsListings();
   Engine.ui.footerDate();
   Engine.ui.quickPanel();

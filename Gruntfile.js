@@ -23,7 +23,7 @@ module.exports = function (grunt) {
     iconFontsDir : 'styles/fonts',
     targetSass : "styles/main.scss", // eg. /sass/main.scss
     compiledCss : "styles/main.min.css", // eg. /css/main-min.scss,
-    sassStyle : 'expanded', // expanded, compressed
+    sassStyle : 'compressed', // expanded, compressed
     sassLineNumbers : true,
     baseDir : ".", // working dir
     browserSyncGhost: false

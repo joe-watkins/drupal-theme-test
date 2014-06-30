@@ -1,2 +1,4 @@
 /node_modules/
 /scripts/_browser-sync-ip.js
+/.sass-cache/
+/.DS_Store

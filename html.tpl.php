@@ -170,6 +170,6 @@
     </ul>
   </div>
 
-  <script src="<?php print $directory; ?>/scripts/main.min.js"></script>
+  <script src="<?php print $directory; ?>/scripts/main.min.js" async></script>
 </body>
 </html>
