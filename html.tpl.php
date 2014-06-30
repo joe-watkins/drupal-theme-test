@@ -49,9 +49,8 @@
   <title>UCSF</title>
   <link rel="shortcut icon" href="<?php print $directory; ?>/favicon.ico">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <link rel="stylesheet" href="<?php print $directory; ?>/styles/main.min.css"/>
-  <script src="<?php print $directory; ?>/scripts/vendor/head.js"></script>
-
+  <link rel="stylesheet" href="/<?php print $directory; ?>/styles/main.min.css"/>
+  <script src="/<?php print $directory; ?>/scripts/vendor/head.js"></script>
 </head>
 <body class="<?php print $classes; ?>">
 
@@ -62,13 +61,16 @@
   <header id="header" role="banner">
     <div class="top-header-links">
       <div class="wrap-a">
-        <ul>
-          <li><a href="#"><img src="<?php print $directory; ?>/images/logo-ucsf-small.png" alt="ucsf"></a></li>
-          <li><a href="#">University of California, San Francisco</a></li>
-          <li><a href="#">About UCSF</a></li>
-          <li><a href="#">Search UCSF</a></li>
-          <li><a href="#">UCSF Medical Center</a></li>
-        </ul>
+        <?php
+          $top_nav = menu_navigation_links('menu-top-nav');
+          print theme('links', array(
+            'links' => $top_nav,
+            'attributes' => array(
+              'id' => 'top-nav',
+              'class' => array('links', 'clearfix'),
+            )
+          ));
+        ?>
       </div>
     </div>
     <div class="header-wrap">

@@ -129,7 +129,13 @@ $(document).ready(function(){
 
         calendarInit();
 
-      } // calendar
+      }, // calendar
+
+      // hacks in image/logo link into top nav
+      topNav : function(){
+        var logoHtml = "<li><a href='http://www.ucsf.edu/'><img src='/sites/all/themes/ucsf/images/logo-ucsf-small.png' alt='ucsf'></a></li>";
+        $("#top-nav").prepend(logoHtml)
+      } // topNav
 
     }// ui
   }// Engine
@@ -140,5 +146,6 @@ $(document).ready(function(){
   Engine.ui.footerDate();
   Engine.ui.quickPanel();
   Engine.ui.calendar();
+  Engine.ui.topNav();
 
 });
